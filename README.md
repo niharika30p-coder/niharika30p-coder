@@ -63,9 +63,7 @@ An academic security project designed to make **Suricata IDS/IPS alerts easier t
 
 **What this project explores:** Security-event visibility, alert review workflows, backend/frontend integration, and AI-assisted explanation of security alerts.
 
-> Project note: This is a dashboard built around Suricata alert data, not a claim of deploying an enterprise SIEM.
 
-**Repository:** Add the public repository link here when available.
 
 ---
 
@@ -84,7 +82,7 @@ A FastAPI-based project for analyzing PDF documents through natural-language-pro
 
 **What this project explores:** Document processing, API development, NLP integration, and organizing multiple analysis features in one application.
 
-**Repository:** Add the public repository link here when available.
+
 
 ---
 
