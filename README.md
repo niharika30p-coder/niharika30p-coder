@@ -1,8 +1,8 @@
-<div align="center">
+ <div align="center">
 
- Hi, I'm Niharika P 👋
+# Hi, I'm Niharika P 👋
 
- SOC Analyst | Cybersecurity Analyst
+### SOC Analyst | Cybersecurity Analyst
 
 **Interested in security monitoring, threat detection, incident triage, and defensive security.**
 
@@ -17,21 +17,20 @@
 
 ---
 
- 👩‍💻 About Me
+## 👩‍💻 About Me
 
 I'm a Computer Science and Engineering graduate from **APJ Abdul Kalam Technological University**, building my foundation in cybersecurity with a focus on **SOC operations and defensive security**.
 
 I'm interested in understanding how security events are generated, investigated, prioritized, and handled. I use hands-on labs and project work to connect cybersecurity concepts with practical workflows.
 
-- 🎯 **Career focus:** SOC Analyst and Cybersecurity Analyst opportunities
 - 🛡️ **Areas of interest:** Security monitoring, alert triage, threat detection, incident response, and penetration testing fundamentals
 - 🧪 **Hands-on learning:** Linux, networking, Kali Linux, and TryHackMe labs
 - 🧰 **Project experience:** Suricata alert monitoring dashboard and a PDF text-analysis platform
 - 📚 **Training:** Offenso Certified Cybersecurity Professional
 
+---
 
-```
- 🛠️ Skills & Tools
+## 🛠️ Skills & Tools
 
 *These represent my current learning and project areas; proficiency varies by tool and topic.*
 
@@ -45,21 +44,24 @@ I'm interested in understanding how security events are generated, investigated,
 | Security Testing Interests | API penetration testing, Android penetration testing, Active Directory penetration testing |
 | Web & AI Project Tools | Next.js, React, WebSockets, Gemini API integration |
 
-🚀 Featured Projects
+---
 
- 1. SENTINEL — AI-Enhanced SOC Dashboard
+## 🚀 Featured Projects
+
+### 1. SENTINEL — AI-Enhanced SOC Dashboard
 
 An academic security project designed to make **Suricata IDS/IPS alerts easier to review** through a dashboard and AI-assisted explanations.
 
 **Technologies:** Suricata, FastAPI, Next.js/React, WebSockets, Gemini
 
 **Project highlights**
+
 - Uses Suricata alerts as the foundation for security-event visibility.
 - Presents alert information in a dashboard-oriented interface.
 - Uses a FastAPI backend and WebSockets for event delivery.
 - Integrates Gemini to provide explanations that can help a learner understand alerts.
 
-**What this project explores:** security-event visibility, alert review workflows, backend/frontend integration, and AI-assisted explanation of security alerts.
+**What this project explores:** Security-event visibility, alert review workflows, backend/frontend integration, and AI-assisted explanation of security alerts.
 
 > Project note: This is a dashboard built around Suricata alert data, not a claim of deploying an enterprise SIEM.
 
@@ -67,25 +69,26 @@ An academic security project designed to make **Suricata IDS/IPS alerts easier t
 
 ---
 
- 2. Dynamic Text Analysis Platform
+### 2. Dynamic Text Analysis Platform
 
 A FastAPI-based project for analyzing PDF documents through natural-language-processing workflows.
 
 **Technologies:** Python, FastAPI, PyMuPDF, NLTK, FinBERT, BERTopic, Ollama
 
 **Project highlights**
+
 - Extracts text from PDF documents.
 - Supports document summarization.
 - Explores sentiment analysis and topic detection.
 - Combines NLP components with an API-based application workflow.
 
-**What this project explores:** document processing, API development, NLP integration, and organizing multiple analysis features in one application.
+**What this project explores:** Document processing, API development, NLP integration, and organizing multiple analysis features in one application.
 
 **Repository:** Add the public repository link here when available.
 
 ---
 
-🧪 Hands-On Learning
+## 🧪 Hands-On Learning
 
 I use practical labs to reinforce concepts in networking, Linux, and cybersecurity.
 
@@ -94,41 +97,36 @@ I use practical labs to reinforce concepts in networking, Linux, and cybersecuri
 - **Security tools:** Learning how tools such as Nmap, Wireshark, Burp Suite, and Suricata support security investigation and testing.
 - **Lab notes:** I plan to document selected exercises with the objective, approach, observations, and lessons learned.
 
+### Current Priority Areas
 
-
-```
-
-Current priority areas:
 - Strengthen networking, Linux, and log-analysis fundamentals.
 - Practise investigating authentication and suspicious network activity.
 - Learn SIEM concepts, alert prioritization, and incident-response workflows.
 - Build repeatable, well-documented lab exercises.
 - Explore Python automation and AI-assisted security analysis as supporting skills.
 
- 📊 GitHub Overview
+---
 
-
+## 📊 GitHub Overview
 
 <div align="center">
 
-[![GitHub stats](https://github-readme-stats.vercel.app/api?username=niharika30p-coder&show_icons=true&hide_border=true&rank_icon=github)](https://github.com/niharika30p-coder)
-
-[![Top languages](https://github-readme-stats.vercel.app/api/top-langs/?username=niharika30p-coder&layout=compact&hide_border=true)](https://github.com/niharika30p-coder)
-
-[![GitHub contribution activity](https://github-readme-activity-graph.vercel.app/graph?username=niharika30p-coder&hide_border=true)](https://github.com/niharika30p-coder)
+[![GitHub Stats](https://github-readme-stats.vercel.app/api?username=niharika30p-coder&show_icons=true&hide_border=true&rank_icon=github)](https://github.com/niharika30p-coder)
 
 </div>
 
+---
 
-🎓 Education & Training
+## 🎓 Education & Training
 
 - **B.Tech — Computer Science and Engineering**  
   APJ Abdul Kalam Technological University
 - **Offenso Certified Cybersecurity Professional**  
   Cybersecurity training
 
+---
 
- 🤝 Let's Connect
+## 🤝 Let's Connect
 
 I'm open to connecting with cybersecurity professionals and exploring suitable **entry-level SOC Analyst and Cybersecurity Analyst** opportunities.
 
@@ -138,10 +136,3 @@ I'm open to connecting with cybersecurity professionals and exploring suitable *
 - **GitHub:** [niharika30p-coder](https://github.com/niharika30p-coder)
 
 ---
-
-<div align="center">
-
-
-
-</div>
-
