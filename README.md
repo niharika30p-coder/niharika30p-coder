@@ -2,7 +2,7 @@
 
 # Hi, I'm Niharika P 👋
 
-### Aspiring SOC Analyst | Cybersecurity Graduate
+### SOC Analyst | Cybersecurity Graduate
 
 **Interested in security monitoring, threat detection, incident triage, and defensive security.**
 
@@ -31,18 +31,6 @@ I'm interested in understanding how security events are generated, investigated,
 
 > I'm pursuing entry-level opportunities where I can contribute, learn from experienced security teams, and continue developing practical investigation skills.
 
-## 🧭 Career Focus
-
-```text
-Networking & Linux
-       ↓
-Security logs and alert fundamentals
-       ↓
-SOC monitoring and alert triage
-       ↓
-Incident investigation and response
-       ↓
-Detection engineering and cloud security
 ```
 
 ## 🛠️ Skills & Tools
@@ -110,16 +98,6 @@ I use practical labs to reinforce concepts in networking, Linux, and cybersecuri
 
 > Lab progress and room counts are intentionally not shown here because verified current statistics have not been provided.
 
-## 📚 Learning Roadmap
-
-```mermaid
-flowchart TD
-    A[Networking fundamentals] --> B[Linux and system basics]
-    B --> C[Logs, events, and authentication]
-    C --> D[SOC monitoring and alert triage]
-    D --> E[Incident investigation and response]
-    E --> F[Detection rules and SIEM workflows]
-    F --> G[Cloud security and AI security]
 ```
 
 Current priority areas:
@@ -143,7 +121,6 @@ Current priority areas:
 
 </div>
 
-> GitHub charts reflect public repository/activity data and depend on third-party services. They may take time to populate or may not render during service outages. No contribution totals, language percentages, or rankings are manually claimed here.
 
 ## 🎓 Education & Training
 
