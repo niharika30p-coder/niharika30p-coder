@@ -1,149 +1,117 @@
-<div align="center">
+# 🔐 Password Strength Analyzer
 
-# Hi, I'm Niharika P 👋
+A beginner-friendly cybersecurity mini project built with **Python** and **Streamlit**.
+It analyzes a password locally, explains its rating with a transparent scoring system,
+and gives specific tips for improving it.
 
-### SOC Analyst | Cybersecurity Graduate
+> ⚠️ **Educational estimate only.** This tool cannot guarantee that a password will
+> resist real-world cracking attempts.
 
-**Interested in security monitoring, threat detection, incident triage, and defensive security.**
+## Features
 
-[![GitHub](https://img.shields.io/badge/GitHub-niharika30p--coder-181717?style=flat-square&logo=github)](https://github.com/niharika30p-coder)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=flat-square&logo=linkedin)](https://linkedin.com/in/niharika-p-50353a255)
-[![TryHackMe](https://img.shields.io/badge/TryHackMe-Profile-212C42?style=flat-square&logo=tryhackme)](https://tryhackme.com/p/niharika30p)
-[![Email](https://img.shields.io/badge/Email-Contact-EA4335?style=flat-square&logo=gmail&logoColor=white)](mailto:niharika30p@gmail.com)
+- Password input with show/hide (eye icon) and a Clear button
+- Checks: length, uppercase, lowercase, numbers, special characters
+- Detects repeated characters, sequences (`abc`, `123`), keyboard patterns (`qwer`),
+  and "Word + Numbers" shapes (`Summer2024`)
+- Compares against a small local list of common passwords and words (including simple
+  leetspeak such as `p@ssw0rd`)
+- Five labels: Very Weak, Weak, Moderate, Strong, Very Strong
+- Dark navy / teal cybersecurity dashboard with strength meter, checklist, and recommendations
+- Educational section: password strength, length, unique passwords, password managers, MFA
+- Unit tests with made-up example passwords
 
-📍 Kerala, India
+## Tech Stack
 
-</div>
+Python 3.9+, Streamlit, `re` (regular expressions), `unittest`
 
----
-
-## 👩‍💻 About Me
-
-I'm a Computer Science and Engineering graduate from **APJ Abdul Kalam Technological University**, building my foundation in cybersecurity with a focus on **SOC operations and defensive security**.
-
-I'm interested in understanding how security events are generated, investigated, prioritized, and handled. I use hands-on labs and project work to connect cybersecurity concepts with practical workflows.
-
-- 🎯 **Career focus:** SOC Analyst and Cybersecurity Analyst opportunities
-- 🛡️ **Areas of interest:** Security monitoring, alert triage, threat detection, incident response, and penetration testing fundamentals
-- 🧪 **Hands-on learning:** Linux, networking, Kali Linux, and TryHackMe labs
-- 🧰 **Project experience:** Suricata alert monitoring dashboard and a PDF text-analysis platform
-- 📚 **Training:** Offenso Certified Cybersecurity Professional
-
-> I'm pursuing entry-level opportunities where I can contribute, learn from experienced security teams, and continue developing practical investigation skills.
+## Project Structure
 
 ```
+password-strength-analyzer/
+├── .streamlit/config.toml
+├── app.py
+├── tests.py
+├── requirements.txt
+├── README.md
+└── .gitignore
+```
 
-## 🛠️ Skills & Tools
+## Installation (Windows + VS Code)
 
-*These represent my current learning and project areas; proficiency varies by tool and topic.*
+```powershell
+cd password-strength-analyzer
+python -m venv venv
+venv\Scripts\Activate.ps1
+pip install -r requirements.txt
+```
 
-| Area | Skills and tools |
+## Usage
+
+```powershell
+streamlit run app.py
+```
+
+Open the local URL shown in the terminal (usually http://localhost:8501), type a
+password, and press **Enter**. Do not test real passwords you use.
+
+## Run the Tests
+
+```powershell
+python tests.py
+```
+
+## How Scoring Works
+
+| Category | Max points | How points are earned |
+|---|---|---|
+| Length | 50 | <6: 0, 6-7: 5, 8-9: 15, 10-11: 25, 12-15: 40, 16+: 50 |
+| Character variety | 20 | 5 points each for uppercase, lowercase, digit, special |
+| Pattern avoidance | 30 | Start at 30, minus 10 for each: repeats, sequences, keyboard patterns, "Word+Numbers" shape |
+
+**Caps** can lower the final score:
+
+| Condition | Maximum score / label |
 |---|---|
-| SOC & Defensive Security | SOC operations fundamentals, alert triage concepts, security monitoring, incident response fundamentals |
-| Networking & Systems | Networking fundamentals, Linux, Kali Linux |
-| Security Testing Tools | Nmap, Wireshark, Burp Suite |
-| Detection & Monitoring | Suricata IDS/IPS, alert/event review |
-| Programming & APIs | Python, FastAPI, API security testing fundamentals |
-| Security Testing Interests | API penetration testing, Android penetration testing, Active Directory penetration testing |
-| Web & AI Project Tools | Next.js, React, WebSockets, Gemini API integration |
+| Under 6 characters | 20 (Very Weak) |
+| Under 8 characters | 44 (Weak) |
+| Exactly matches a common password | 10 (Very Weak) |
+| Contains a very common word | 44 (Weak) |
+| Under 12 characters | 84 (cannot be Very Strong) |
 
-## 🚀 Featured Projects
+**Labels:** 0-24 Very Weak · 25-44 Weak · 45-64 Moderate · 65-84 Strong · 85-100 Very Strong
 
-### 1. SENTINEL — AI-Enhanced SOC Dashboard
+## Privacy & Security
 
-An academic security project designed to make **Suricata IDS/IPS alerts easier to review** through a dashboard and AI-assisted explanations.
+- Passwords are never written to files, databases, logs, or browser storage.
+- No external APIs or AI services are used.
+- The analysis result object never contains the password.
+- Streamlit usage statistics are disabled in `.streamlit/config.toml`.
+- Strength is estimated with rules, **not** by hashing the password.
 
-**Technologies:** Suricata, FastAPI, Next.js/React, WebSockets, Gemini
+## Limitations
 
-**Project highlights**
-- Uses Suricata alerts as the foundation for security-event visibility.
-- Presents alert information in a dashboard-oriented interface.
-- Uses a FastAPI backend and WebSockets for event delivery.
-- Integrates Gemini to provide explanations that can help a learner understand alerts.
+- Rule-based estimate, not a real cracking simulation (not a replacement for tools like zxcvbn).
+- The common-password list is small and local, so many leaked passwords will not be detected.
+- Does not detect names, birthdays, or personal information.
+- Streamlit sends the typed text from your browser to the Python process. **Run it locally.**
+  If you deploy it publicly, passwords would travel to that server, so do not do that
+  without understanding the risks.
+- The result updates when you press Enter or click away, not on every keystroke.
 
-**What this project explores:** security-event visibility, alert review workflows, backend/frontend integration, and AI-assisted explanation of security alerts.
+## Screenshots
 
-> Project note: This is a dashboard built around Suricata alert data, not a claim of deploying an enterprise SIEM.
+| Dashboard | Strong password result |
+|---|---|
+| ![Dashboard](screenshots/dashboard.png) | ![Strong result](screenshots/strong.png) |
 
-**Repository:** Add the public repository link here when available.
+*(Create a `screenshots/` folder and add your own images.)*
 
----
+## Future Improvements
 
-### 2. Dynamic Text Analysis Platform
+- Larger offline common-password list
+- Estimated "time to crack" ranges with clear caveats
+- Passphrase generator
 
-A FastAPI-based project for analyzing PDF documents through natural-language-processing workflows.
+## License
 
-**Technologies:** Python, FastAPI, PyMuPDF, NLTK, FinBERT, BERTopic, Ollama
-
-**Project highlights**
-- Extracts text from PDF documents.
-- Supports document summarization.
-- Explores sentiment analysis and topic detection.
-- Combines NLP components with an API-based application workflow.
-
-**What this project explores:** document processing, API development, NLP integration, and organizing multiple analysis features in one application.
-
-**Repository:** Add the public repository link here when available.
-
----
-
-## 🧪 Hands-On Learning
-
-I use practical labs to reinforce concepts in networking, Linux, and cybersecurity.
-
-- **TryHackMe:** [View my profile](https://tryhackme.com/p/niharika30p)
-- **Linux & networking:** Practising command-line basics, network services, ports, and troubleshooting.
-- **Security tools:** Learning how tools such as Nmap, Wireshark, Burp Suite, and Suricata support security investigation and testing.
-- **Lab notes:** I plan to document selected exercises with the objective, approach, observations, and lessons learned.
-
-> Lab progress and room counts are intentionally not shown here because verified current statistics have not been provided.
-
-```
-
-Current priority areas:
-- Strengthen networking, Linux, and log-analysis fundamentals.
-- Practise investigating authentication and suspicious network activity.
-- Learn SIEM concepts, alert prioritization, and incident-response workflows.
-- Build repeatable, well-documented lab exercises.
-- Explore Python automation and AI-assisted security analysis as supporting skills.
-
-## 📊 GitHub Overview
-
-<!-- These cards are generated by third-party services and may occasionally be unavailable. -->
-
-<div align="center">
-
-[![GitHub stats](https://github-readme-stats.vercel.app/api?username=niharika30p-coder&show_icons=true&hide_border=true&rank_icon=github)](https://github.com/niharika30p-coder)
-
-[![Top languages](https://github-readme-stats.vercel.app/api/top-langs/?username=niharika30p-coder&layout=compact&hide_border=true)](https://github.com/niharika30p-coder)
-
-[![GitHub contribution activity](https://github-readme-activity-graph.vercel.app/graph?username=niharika30p-coder&hide_border=true)](https://github.com/niharika30p-coder)
-
-</div>
-
-
-## 🎓 Education & Training
-
-- **B.Tech — Computer Science and Engineering**  
-  APJ Abdul Kalam Technological University
-- **Offenso Certified Cybersecurity Professional**  
-  Cybersecurity training
-
-*Add the issuing organization's official certificate URL or exact completion details if you want this section to link to proof.*
-
-## 🤝 Let's Connect
-
-I'm open to connecting with cybersecurity professionals and exploring suitable **entry-level SOC Analyst and Cybersecurity Analyst** opportunities.
-
-- **Email:** [niharika30p@gmail.com](mailto:niharika30p@gmail.com)
-- **LinkedIn:** [linkedin.com/in/niharika-p-50353a255](https://linkedin.com/in/niharika-p-50353a255)
-- **TryHackMe:** [niharika30p](https://tryhackme.com/p/niharika30p)
-- **GitHub:** [niharika30p-coder](https://github.com/niharika30p-coder)
-
----
-
-<div align="center">
-
-*Learning continuously. Practising deliberately. Building toward a career in cybersecurity.*
-
-</div>
+MIT
